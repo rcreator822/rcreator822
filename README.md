@@ -1,16 +1,15 @@
 ## Hi there 👋
+I'm Rehan! Thanks for visiting my GitHub profile. Here are a few things about me:
 
-<!--
-**rcreator822/rcreator822** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+### About Me 🚀
+- 💻 My prefered coding languages are HTML, CSS, and JavaScript
+- 😆 I am a Mincraft kid
+- 🔭 Learning a lot from my friend, [Dotto](https://github.com/DotLYHiyou)
+- 🔍 Hope I'm actually coding this right
 
-Here are some ideas to get you started:
+### Github Stats
+![Rehan's GitHub stats](https://github-readme-stats.vercel.app/api?username=rcreator822&theme=dark&show_icons=true)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=rcreator822&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### Acknowledgements
+Thanks to [Dotto](https://github.com/DotLYHiyou), the coding club at my school, w3schools, and Microsoft Copiolet.
