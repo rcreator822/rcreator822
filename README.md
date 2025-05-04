@@ -13,3 +13,6 @@ I'm Rehan! Thanks for visiting my GitHub profile. Here are a few things about me
 
 ### Acknowledgements
 Thanks to the coding club at my school, w3schools, and Microsoft Copiolet.
+
+### Main Project
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=rcreator822&repo=GamerHub&theme=dark)](https://github.com/rcreator822/GamerHub)
