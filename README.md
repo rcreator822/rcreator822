@@ -1,5 +1,5 @@
 ## Hi there 👋
-I'm Rehan! Thanks for visiting my GitHub profile. Here are a few things about me:
+I'm rcreator! Thanks for visiting my GitHub profile. Here are a few things about me:
 
 ### About Me 🚀
 - 💻 My prefered coding languages are HTML, CSS, and JavaScript
