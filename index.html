@@ -2,8 +2,10 @@
 <html lang="en">
   <head>
     <title>rcreator822</title>
+    <base href="https://rcreator822.github.io/rcreator822/">
     <link rel="icon" href="favicon-round.ico">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
@@ -53,6 +55,16 @@
         z-index: 2;
       }
 
+      #typed-text::after {
+        content: '|';
+        animation: blink 0.7s infinite;
+      }
+
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+
       p, pre {
         padding: 10px;
         margin: 20px;
@@ -90,15 +102,18 @@
         gap: 10px;
         margin-top: 20px;
         z-index: 2;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       .tabs a {
-        padding: 10px 20px;
+        padding: 10px 15px;
         background-color: gray;
         border-radius: 10px;
         color: white;
         text-decoration: none;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        font-size: 1rem;
       }
 
       .tabs a:hover {
@@ -107,8 +122,9 @@
       }
 
       #viewer {
-        width: 90vw;
-        height: 120vh;
+        width: 95vw;
+        max-width: 1000px;
+        height: 90vh;
         border: none;
         margin: 40px 0;
         background: #f0f0f0;
@@ -132,6 +148,54 @@
         background-color: black;
         color: white;
       }
+
+      /* 📱 MEDIA QUERIES FOR RESPONSIVENESS */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.5rem;
+          padding: 8px;
+        }
+
+        #icon {
+          width: 150px;
+          height: 150px;
+        }
+
+        #toggle-theme {
+          font-size: 0.9rem;
+          padding: 8px 16px;
+        }
+
+        .tabs a {
+          font-size: 0.9rem;
+          padding: 8px 12px;
+        }
+
+        #viewer {
+          height: 80vh;
+        }
+
+        p {
+          font-size: 0.95rem;
+          margin: 15px;
+          padding: 8px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 1.2rem;
+        }
+
+        .tabs {
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        #viewer {
+          height: 75vh;
+        }
+      }
     </style>
   </head>
   <body>
@@ -143,7 +207,7 @@
       <a href="https://ghgames.netlify.app" target="_blank">Gamer Hub</a>
     </div>
 
-    <h1>Hi, I'm<br>rcreator822</h1>
+    <h1>Hi, I'm<br><span id="typed-text"></span></h1>
     <img id="icon" src="favicon.ico" alt="Icon">
 
     <div id="content">
@@ -214,6 +278,21 @@
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
       });
+
+      // Typing Effect
+      const text = "rcreator822";
+      const typedText = document.getElementById("typed-text");
+      let index = 0;
+
+      function type() {
+        if (index < text.length) {
+          typedText.textContent += text.charAt(index);
+          index++;
+          setTimeout(type, 150); // You can tweak the speed here
+        }
+      }
+
+      window.addEventListener("load", type);
     </script>
   </body>
 </html>
