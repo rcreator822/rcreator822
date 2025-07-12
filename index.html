@@ -278,20 +278,36 @@
         canvas.height = window.innerHeight;
       });
 
-      // Typing Effect
-      const text = "rcreator822!";
+      const messages = ["rcreator822", "a Coder", "an Explorer", "a Back-End Apprentice"];
       const typedText = document.getElementById("typed-text");
-      let index = 0;
+      let msgIndex = 0;
+      let charIndex = 0;
+      let typing = true;
 
-      function type() {
-        if (index < text.length) {
-          typedText.textContent += text.charAt(index);
-          index++;
-          setTimeout(type, 150); // You can tweak the speed here
+      function typeLoop() {
+        if (typing) {
+          if (charIndex < messages[msgIndex].length) {
+            typedText.textContent += messages[msgIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(typeLoop, 150);
+          } else {
+            typing = false;
+            setTimeout(typeLoop, 1000); // Pause before deleting
+          }
+        } else {
+          if (charIndex > 0) {
+            typedText.textContent = messages[msgIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(typeLoop, 100);
+          } else {
+            typing = true;
+            msgIndex = (msgIndex + 1) % messages.length;
+            setTimeout(typeLoop, 500); // Pause before typing next message
+          }
         }
       }
 
-      window.addEventListener("load", type);
+      window.addEventListener("load", typeLoop)
     </script>
   </body>
 </html>
